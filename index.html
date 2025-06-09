@@ -3,133 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nosso Amor ❤️</title>
+  <title>Para minha maravilhosa ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+    body {
       background-color: #fff0f3;
-      color: #4a0d0d;
+      color: #660000;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
     }
-    header {
-      background-color: #b3002d;
-      color: white;
+    section {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      scroll-snap-align: start;
+      padding: 2rem;
       text-align: center;
-      padding: 60px 20px;
     }
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+    h1, h2 {
+      color: #c1121f;
+      margin-bottom: 1rem;
     }
-    header p {
-      font-size: 1.2em;
+    p {
       max-width: 600px;
-      margin: auto;
-    }
-    .section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    .timeline p {
-      margin-bottom: 1.5em;
-      line-height: 1.6em;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
     }
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
       justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
     }
     .gallery img {
-      width: 160px;
+      width: 200px;
       height: auto;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
-    .message {
-      background-color: #ffe6eb;
-      border-radius: 12px;
-      padding: 30px;
-      margin-top: 30px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    .gallery img:hover {
+      transform: scale(1.05);
     }
-    .love-button {
-      display: block;
-      margin: 50px auto 20px;
-      padding: 15px 30px;
-      background-color: #ff3366;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      font-size: 1.2em;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-    .love-button:hover {
-      background-color: #e6004c;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9em;
-      color: #888;
+    audio {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Você é o melhor capítulo da minha vida</h1>
-    <p>Obrigado por ser meu lar, meu sorriso mais sincero e o amor que eu sempre sonhei. Te amo, minha maravilhosa.</p>
-  </header>
+  <audio autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg" />
+  </audio>
 
-  <section class="section timeline">
-    <h2>🕰️ Como Tudo Começou</h2>
-    <p>No começo, era pra ser só um rolê com a Jose… mas o destino resolveu dar um empurrãozinho.<br>
-    A Jose não foi, e acabou ficando só entre eu e a Giseli. Passei pra buscá-la com meu carro (ainda sem insulfilm, rs) e nosso "encontro secreto" começou ali.</p>
-
-    <p>Fomos ao Shopping Iguatemi Alphaville. No Coco Bambu, brindamos com um chopp gelado, rindo como se o mundo lá fora nem existisse.</p>
-
-    <p>Depois, curtimos o show do Péricles — nos abraçamos, sorrimos e deixamos o pagode embalar algo que já estava nascendo entre nós.</p>
-
-    <p>De lá, seguimos pro boliche Phoenix, em Jundiaí. Entre uma jogada e outra, os olhares já diziam mais do que qualquer palavra.</p>
-
-    <p>A noite terminou no estacionamento do mercado Dom Olívio. Sentados no carro, dividimos chocolate e algumas verdades tímidas.<br>
-    Eu olhei pra ela e disse: <strong>“Seu beijo deve ser muito bom.”</strong><br>
-    Ela sorriu e perguntou: <strong>“Por quê?”</strong><br>
-    Eu, meio tímido, respondi: <strong>“Porque ele é difícil.”</strong><br>
-    E foi ali, entre sorrisos e olhares cúmplices, que nos beijamos pela primeira vez.</p>
-
-    <p>Nosso começo foi tímido, doce… e inesquecível.<br>
-    <em>E quem sabe, talvez a noite nem tenha terminado ali. 🌙💭</em></p>
-  </section>
-
-  <section class="section">
-    <h2>📸 Momentos Nossos</h2>
-    <div class="gallery">
-      <img src="foto1.jpg" alt="Foto 1 do casal">
-      <img src="foto2.jpg" alt="Foto 2 do casal">
-      <img src="foto3.jpg" alt="Foto 3 do casal">
-      <img src="foto4.jpg" alt="Foto 4 do casal">
-      <img src="foto5.jpg" alt="Foto 5 do casal">
-    </div>
-  </section>
-
-  <section class="section message">
-    <h2>💌 Pra você, minha deliciosa</h2>
+  <section>
+    <h1>Oi, minha deliciosa ❤️</h1>
     <p>
-      Desde o primeiro olhar, eu soube que você era diferente.<br>
-      Você é linda, meiga, bravinha do jeito mais encantador do mundo.<br>
-      Gosta de pagode, Shopee, Mentos... e de mim também, né?<br>
-      Sou grato por cada momento com você.<br>
-      Te amo com tudo que sou.
+      Desde o nosso primeiro encontro no show do Péricles (e depois aquele boliche escondido 👀), minha vida ganhou cor, ritmo e paixão. Esse cantinho é só nosso, feito com muito carinho pra lembrar o quanto eu te amo.
     </p>
   </section>
 
-  <button class="love-button">Te amo, minha maravilhosa 💖</button>
+  <section>
+    <h2>Momentos nossos</h2>
+    <div class="gallery">
+      <img src="fotos/foto1.jpg" alt="Foto do casal" />
+      <img src="fotos/foto2.jpg" alt="Foto do casal" />
+      <img src="fotos/foto3.jpg" alt="Foto do casal" />
+      <img src="fotos/foto4.jpg" alt="Foto do casal" />
+      <img src="fotos/foto5.jpg" alt="Foto do casal" />
+    </div>
+  </section>
 
-  <footer>
-    Feito com carinho por alguém que não consegue parar de sorrir desde 05/04/2025 🫶
-  </footer>
+  <section>
+    <h2>Nossas figurinhas 💌</h2>
+    <div class="gallery">
+      <img src="figurinhas/fig1.png" alt="Figurinha 1" />
+      <img src="figurinhas/fig2.png" alt="Figurinha 2" />
+      <img src="figurinhas/fig3.png" alt="Figurinha 3" />
+      <img src="figurinhas/fig4.png" alt="Figurinha 4" />
+      <img src="figurinhas/fig5.png" alt="Figurinha 5" />
+    </div>
+  </section>
+
+  <section>
+    <h2>Promessa</h2>
+    <p>
+      Cada detalhe seu me encanta. Seu jeitinho meigo, seu olhar desconfiado, sua braveza irresistível... Eu prometo cuidar de você com amor, com desejo, com respeito — hoje e sempre.
+    </p>
+  </section>
+
+  <section>
+    <h2>Escaneia e vem pro nosso mundo 💘</h2>
+    <img src="qr_code_pagina_amor_giseli.png" alt="QR Code da nossa página" style="width: 200px; margin-top: 1rem;" />
+  </section>
 </body>
 </html>
