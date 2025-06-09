@@ -7,11 +7,136 @@
   <title>Para minha maravilhosa ❤️</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sacramento&display=swap" rel="stylesheet">
   <style>
-    body { background: black; color: white; font-family: 'Sacramento', cursive; }
-    section { height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 100vh;
+      font-family: 'Sacramento', cursive;
+      background: black;
+      color: gold;
+    }
+    section {
+      scroll-snap-align: start;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 2em;
+    }
+    h1, h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    p {
+      max-width: 800px;
+      line-height: 1.6em;
+      margin-bottom: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .gallery img {
+      width: 160px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    }
+    .decor {
+      font-size: 2em;
+      margin: 10px 0;
+    }
+    .button-love {
+      background-color: gold;
+      color: black;
+      font-size: 1.2em;
+      padding: 15px 30px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+    audio {
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <section><h1>Você é o melhor capítulo da minha vida</h1><p>Te amo, minha maravilhosa!</p></section>
+  <audio autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <section>
+    <h1>Você é o melhor capítulo da minha vida</h1>
+    <div class="decor">❤️❤️❤️</div>
+    <p>Obrigado por ser meu lar, meu sorriso mais sincero e o amor que eu sempre sonhei. Te amo, minha maravilhosa.</p>
+  </section>
+
+  <section>
+    <h2>🕰️ Como Tudo Começou</h2>
+    <div class="decor">💖💭✨</div>
+    <p>No começo, era pra ser só um rolê com a Jose… mas o destino resolveu dar um empurrãozinho.</p>
+    <p>A Jose não foi, e acabou ficando só entre eu e a Giseli. Passei pra buscá-la com meu carro (ainda sem insulfilm, rs) e nosso "encontro secreto" começou ali.</p>
+    <p>Fomos ao Shopping Iguatemi Alphaville. No Coco Bambu, brindamos com um chopp gelado, rindo como se o mundo lá fora nem existisse.</p>
+    <p>Depois, curtimos o show do Péricles — nos abraçamos, sorrimos e deixamos o pagode embalar algo que já estava nascendo entre nós.</p>
+    <p>De lá, seguimos pro boliche Phoenix, em Jundiaí. Entre uma jogada e outra, os olhares já diziam mais do que qualquer palavra.</p>
+    <p>A noite terminou no estacionamento do mercado Dom Olívio. Sentados no carro, dividimos chocolate e algumas verdades tímidas.</p>
+    <p>Eu olhei pra ela e disse: <strong>“Seu beijo deve ser muito bom.”</strong></p>
+    <p>Ela sorriu e perguntou: <strong>“Por quê?”</strong></p>
+    <p>Eu, meio tímido, respondi: <strong>“Porque ele é difícil.”</strong></p>
+    <p>E foi ali, entre sorrisos e olhares cúmplices, que nos beijamos pela primeira vez.</p>
+    <p><em>Nosso começo foi tímido, doce… e inesquecível.</em></p>
+    <p><em>E quem sabe, talvez a noite nem tenha terminado ali. 🌙💭</em></p>
+  </section>
+
+  <section>
+    <h2>📸 Momentos Nossos</h2>
+    <div class="decor">💑💘📷</div>
+    <div class="gallery">
+      <img src="fotos/foto1.jpg" alt="Foto 1 do casal" />
+      <img src="fotos/foto2.jpg" alt="Foto 2 do casal" />
+      <img src="fotos/foto3.jpg" alt="Foto 3 do casal" />
+      <img src="fotos/foto4.jpg" alt="Foto 4 do casal" />
+      <img src="fotos/foto5.jpg" alt="Foto 5 do casal" />
+    </div>
+  </section>
+
+  <section>
+    <h2>🌟 Figurinhas Divertidas</h2>
+    <div class="decor">🥰😂😜</div>
+    <div class="gallery">
+      <img src="figurinhas/fig1.png" alt="Figurinha 1" />
+      <img src="figurinhas/fig2.png" alt="Figurinha 2" />
+      <img src="figurinhas/fig3.png" alt="Figurinha 3" />
+      <img src="figurinhas/fig4.png" alt="Figurinha 4" />
+      <img src="figurinhas/fig5.png" alt="Figurinha 5" />
+    </div>
+  </section>
+
+  <section>
+    <h2>💌 Pra você, minha deliciosa</h2>
+    <div class="decor">💋🔥❤️</div>
+    <p>Desde o primeiro olhar, eu soube que você era diferente.</p>
+    <p>Você é linda, meiga, bravinha do jeito mais encantador do mundo.</p>
+    <p>Gosta de pagode, Shopee, Mentos... e de mim também, né?</p>
+    <p>Sou grato por cada momento com você.</p>
+    <p>Te amo com tudo que sou.</p>
+    <button class="button-love">Te amo, minha maravilhosa 💖</button>
+  </section>
+
+  <section>
+    <h2>🫶 05/04/2025</h2>
+    <div class="decor">🎉💞🎶</div>
+    <p>Feito com carinho por alguém que não consegue parar de sorrir desde esse dia.</p>
+    <img src="qr_code_pagina_amor_giseli.png" alt="QR Code da Página" style="margin-top:20px; width: 180px;" />
+  </section>
+
 </body>
 </html>
