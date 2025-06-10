@@ -1,7 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
-import { useEffect } from 'react';
+import { useActionState, useEffect } from 'react';
+import { useFormStatus } from 'react-dom';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
@@ -26,7 +26,7 @@ function SubmitButton() {
 }
 
 export default function LoveNoteGenerator() {
-  const [state, formAction] = useFormState(handleGenerateLoveNoteAction, initialState);
+  const [state, formAction] = useActionState(handleGenerateLoveNoteAction, initialState);
   const { toast } = useToast();
 
   useEffect(() => {
