@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap'); /* Moved to the very top */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -103,4 +104,5 @@ body {
 :root {
   --font-belleza: 'Belleza', sans-serif;
   --font-alegreya: 'Alegreya', serif;
+  --font-parisienne: 'Parisienne', cursive;
 }

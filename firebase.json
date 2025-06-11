@@ -1,0 +1,19 @@
+{
+  "apphosting": {
+    "targets": [
+      {
+        "target": "default",
+        "backend": {
+          "services": [
+            {
+              "id": "default",
+              "env": {
+                "GOOGLE_API_KEY": "AIzaSyCxjUt1X2f_MerHQyF3ZRazClZJphalqL4"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

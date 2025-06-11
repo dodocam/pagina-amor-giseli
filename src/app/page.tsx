@@ -1,9 +1,9 @@
 
-import StorySlide from '@/components/StorySlide';
-import PhotoGallery from '@/components/PhotoGallery';
-import BackgroundMusicPlayer from '@/components/BackgroundMusicPlayer';
-import LoveNoteGenerator from '@/components/LoveNoteGenerator';
+"use client";
+
+import { useState } from 'react';
 import { Heart, Clock, Camera, Moon, MessageSquareText } from 'lucide-react';
+import StorySlide from '@/components/StorySlide'; // Added this import
 
 const photos = [
   { id: '1', src: '/imagem1.jpg', alt: 'Casal sorrindo em parque dia ensolarado', caption: 'Passeio no parque, esse foi o 1 de muitos! ​🌳🥰​​', aiHint: 'couple park' },
@@ -14,7 +14,11 @@ const photos = [
   { id: '6', src: '/imagem6.jpg', alt: 'Nova imagem adicionada ao carrossel', caption: 'Mais um momento inesquecível! 📸💖', aiHint: 'celebration event' },
 ];
 
+import PhotoGallery from '@/components/PhotoGallery';
+import BackgroundMusicPlayer from '@/components/BackgroundMusicPlayer';
+
 export default function Home() {
+  const [showLoveText, setShowLoveText] = useState(false);
   const commonTextStyle = "font-body text-lg md:text-xl text-foreground/90 mb-5 max-w-prose leading-relaxed";
   const headingStyle = "font-headline text-3xl md:text-4xl text-primary mb-6";
 
@@ -29,12 +33,12 @@ export default function Home() {
         </StorySlide>
 
         <StorySlide style={{ animationDelay: '0.4s' }}>
-          <h2 className={headingStyle}><Clock className="inline-block w-8 h-8 mr-2 align-middle" />Como Tudo Começou</h2>
-          <p className={commonTextStyle}>No começo, era pra ser só um rolê com a Jose… mas o destino resolveu dar um empurrãozinho.</p>
+          <h2 style={{ fontFamily: 'Parisienne, cursive' }} className={headingStyle}><Clock className="inline-block w-8 h-8 mr-2 align-middle" />Como Tudo Começou</h2>
+          <p className={commonTextStyle}>No começo, era pra ser só um rolê com a Josi… mas o destino resolveu dar um empurrãozinho.</p>
         </StorySlide>
 
         <StorySlide style={{ animationDelay: '0.6s' }}>
-          <p className={commonTextStyle}>A Jose não foi, e acabou ficando só entre eu e a Gi. Passei pra buscá-la com meu carro (ainda sem insulfilm, rs) e nosso "encontro secreto" começou ali.</p>
+          <p className={commonTextStyle}>A Josi não foi, e acabou ficando só entre eu e a Gi. Passei pra buscá-la com meu carro (ainda sem insulfilm, rs) e nosso \"encontro secreto\" começou ali.</p>
         </StorySlide>
 
         <StorySlide style={{ animationDelay: '0.8s' }}>
@@ -65,13 +69,29 @@ export default function Home() {
         </StorySlide>
 
         <StorySlide style={{ animationDelay: '2s' }}>
-          <h2 className={headingStyle}><Camera className="inline-block w-8 h-8 mr-2 align-middle" />Momentos Nossos</h2>
+          <h2 style={{ fontFamily: 'Parisienne, cursive' }} className={headingStyle}><Camera className="inline-block w-8 h-8 mr-2 align-middle" />Momentos Nossos</h2>
           <PhotoGallery photos={photos} />
         </StorySlide>
 
-        <StorySlide style={{ animationDelay: '2.2s' }}>
-          <LoveNoteGenerator />
-        </StorySlide>
+        <section className="section message">
+          <h2 className="text-2xl font-bold">💌 Pra você, minha deliciosa</h2>
+          <p className="mt-4 text-lg">
+            Desde o primeiro olhar, eu soube que você era diferente.<br />
+            Você é linda, meiga, bravinha do jeito mais encantador do mundo.<br />
+            Gosta de pagode, Shopee, Mentos... e de mim também, né?<br />
+            Sou grato por cada momento com você.<br />
+            Te amo com tudo que sou.
+          </p>
+        </section>
+
+        <button className="love-button bg-pink-500 text-white font-bold py-2 px-4 rounded mt-8" onClick={() => setShowLoveText(true)}>Te amo, minha maravilhosa 💖</button>
+        {showLoveText && (
+          <p className="mt-4 text-center text-pink-600 text-xl font-bold">Te amo</p>
+        )}
+
+        <footer className="mt-12 text-center text-gray-600">
+          Feito com carinho por alguém que não consegue parar de sorrir desde 05/04/2025 🫶
+        </footer>
       </main>
     </>
   );
