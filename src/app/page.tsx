@@ -9,7 +9,7 @@ const photos = [
   { id: '1', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/071f225b-8b2b-4ac3-8726-67e4d8ae0168.png', alt: 'Casal sorrindo para selfie no shopping', caption: 'Aquele dia no shopping! 🛍️🤳', aiHint: 'couple shopping' },
   { id: '2', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/e2b01264-657c-4f6d-aece-b723120a5a77.png', alt: 'Casal sorrindo em ambiente interno com vista para a cidade', caption: 'O show do Péricles, lembra?', aiHint: 'couple concert' },
   { id: '3', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/9c54b0e1-f300-4b91-9328-9f84367656d6.png', alt: 'Casal tirando selfie em ambiente moderno e iluminado', caption: 'Sempre juntos, em todos os momentos ✨', aiHint: 'couple selfie' },
-  { id: '4', src: 'https://placehold.co/300x300.png', alt: 'Foto 4', caption: 'Abraço de lar', aiHint: 'couple hugging' },
+  { id: '4', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/f375a60b-3e1d-4d5e-9f17-54a58477d719.png', alt: 'Casal abraçado sorrindo', caption: 'Abraço de lar', aiHint: 'couple hugging' },
   { id: '5', src: 'https://placehold.co/300x300.png', alt: 'Foto 5', caption: 'Docinho que é você 💖', aiHint: 'dessert love' },
 ];
 
