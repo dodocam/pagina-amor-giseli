@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'storage.googleapis.com', // Mantido para cobrir outros casos, se houver
+        hostname: 'storage.googleapis.com',
         port: '',
         pathname: '/**',
       },
@@ -27,7 +27,7 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'firebasestorage.googleapis.com',
         port: '',
-        pathname: '/v0/b/amorenostro-18dd3.appspot.com/o/**', // Tornando mais específico
+        pathname: '/v0/b/amorenostro-18dd3.appspot.com/o/**',
       },
     ],
   },
