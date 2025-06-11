@@ -10,7 +10,7 @@ const photos = [
   { id: '2', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/e2b01264-657c-4f6d-aece-b723120a5a77.png', alt: 'Casal sorrindo em ambiente interno com vista para a cidade', caption: 'O show do Péricles, lembra?', aiHint: 'couple concert' },
   { id: '3', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/9c54b0e1-f300-4b91-9328-9f84367656d6.png', alt: 'Casal tirando selfie em ambiente moderno e iluminado', caption: 'Sempre juntos, em todos os momentos ✨', aiHint: 'couple selfie' },
   { id: '4', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/f375a60b-3e1d-4d5e-9f17-54a58477d719.png', alt: 'Casal abraçado sorrindo', caption: 'Abraço de lar', aiHint: 'couple hugging' },
-  { id: '5', src: 'https://placehold.co/300x300.png', alt: 'Foto 5', caption: 'Docinho que é você 💖', aiHint: 'dessert love' },
+  { id: '5', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/60d2f0e8-a5b5-4f7e-8e5e-035921e70a36.jpeg', alt: 'Casal sorrindo em um parque', caption: 'Passeio no parque 🌳☀️', aiHint: 'couple park' },
 ];
 
 export default function Home() {
@@ -75,4 +75,3 @@ export default function Home() {
     </>
   );
 }
-
