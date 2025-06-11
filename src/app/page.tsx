@@ -1,10 +1,11 @@
 
 "use client";
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import type { LegacyRef } from 'react';
 import { Heart, Clock, Camera, Moon, MessageSquareText } from 'lucide-react';
 import StorySlide from '@/components/StorySlide';
-
+import type { BackgroundMusicPlayerHandle } from '@/components/BackgroundMusicPlayer';
 import HeartAnimation from '@/components/HeartAnimation';
 const photos = [
   { id: '1', src: '/imagem1.jpg', alt: 'Casal sorrindo em parque dia ensolarado', caption: 'Passeio no parque, esse foi o 1 de muitos! ​🌳🥰​​', aiHint: 'couple park' },
@@ -22,10 +23,18 @@ export default function Home() {
   const [showLoveText, setShowLoveText] = useState(false);
   const commonTextStyle = "font-body text-lg md:text-xl text-foreground/90 mb-5 max-w-prose leading-relaxed";
   const headingStyle = "font-headline text-3xl md:text-4xl text-primary mb-6";
+  const musicPlayerRef = useRef<BackgroundMusicPlayerHandle>(null);
+
+  const handleShowLove = () => {
+    setShowLoveText(true);
+    if (musicPlayerRef.current) {
+      musicPlayerRef.current.playAudio();
+    }
+  };
 
   return (
     <>
-      <BackgroundMusicPlayer src="/copia-proibida-leo-foguete.mp3" />
+      <BackgroundMusicPlayer ref={musicPlayerRef} src="/copia-proibida-leo-foguete.mp3" />
       <main className="snap-container">
         <StorySlide style={{ animationDelay: '0.2s' }}>
           <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl text-slate-500 mb-6">Você é o melhor capítulo da minha vida</h1>
@@ -90,7 +99,7 @@ export default function Home() {
         <div className="w-full text-center my-8 px-4">
           <button
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-8 rounded-lg shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 text-xl inline-block"
-            onClick={() => setShowLoveText(true)}
+            onClick={handleShowLove}
           >
             Te amo, minha maravilhosa 💖
           </button>

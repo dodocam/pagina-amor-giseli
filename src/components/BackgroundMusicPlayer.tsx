@@ -1,28 +1,34 @@
+
 "use client";
 
-import { useEffect, useRef } from 'react';
+import { useRef, useImperativeHandle, forwardRef } from 'react';
 
 interface BackgroundMusicPlayerProps {
   src: string;
 }
 
-export default function BackgroundMusicPlayer({ src }: BackgroundMusicPlayerProps) {
+export interface BackgroundMusicPlayerHandle {
+  playAudio: () => void;
+  pauseAudio: () => void;
+}
+
+const BackgroundMusicPlayer = forwardRef<BackgroundMusicPlayerHandle, BackgroundMusicPlayerProps>(({ src }, ref) => {
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (audio) {
-      // Adiciona um pequeno delay para tentar garantir que o navegador esteja pronto
-      const playTimeout = setTimeout(() => {
-        audio.play().catch(error => {
-          console.warn("Música de fundo: Autoplay foi impedido pelo navegador. Pode ser necessário interagir com a página primeiro.", error);
+  useImperativeHandle(ref, () => ({
+    playAudio: () => {
+      if (audioRef.current) {
+        audioRef.current.play().catch(error => {
+          console.warn("Música de fundo: Play foi impedido. Verifique as permissões do navegador ou interações do usuário.", error);
         });
-      }, 100); // Atraso de 100ms
-
-      // Limpa o timeout se o componente for desmontado antes do play
-      return () => clearTimeout(playTimeout);
+      }
+    },
+    pauseAudio: () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
     }
-  }, []); // Array de dependência vazio para rodar apenas uma vez no mount
+  }));
 
   return (
     <audio ref={audioRef} loop controls={false} style={{ display: 'none' }}>
@@ -30,4 +36,8 @@ export default function BackgroundMusicPlayer({ src }: BackgroundMusicPlayerProp
       Your browser does not support the audio element.
     </audio>
   );
-}
+});
+
+BackgroundMusicPlayer.displayName = 'BackgroundMusicPlayer';
+
+export default BackgroundMusicPlayer;
