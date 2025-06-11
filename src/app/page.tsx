@@ -3,8 +3,9 @@
 
 import { useState } from 'react';
 import { Heart, Clock, Camera, Moon, MessageSquareText } from 'lucide-react';
-import StorySlide from '@/components/StorySlide'; // Added this import
+import StorySlide from '@/components/StorySlide';
 
+import HeartAnimation from '@/components/HeartAnimation';
 const photos = [
   { id: '1', src: '/imagem1.jpg', alt: 'Casal sorrindo em parque dia ensolarado', caption: 'Passeio no parque, esse foi o 1 de muitos! ​🌳🥰​​', aiHint: 'couple park' },
   { id: '2', src: '/imagem2.jpg', alt: 'Casal sorrindo após almoço no Cocobambu', caption: 'Almoço delicioso junto do meu amor!​😋​❤️​', aiHint: 'couple restaurant' },
@@ -73,9 +74,11 @@ export default function Home() {
           <PhotoGallery photos={photos} />
         </StorySlide>
 
-        <section className="section message">
-          <h2 className="text-2xl font-bold">💌 Pra você, minha deliciosa</h2>
-          <p className="mt-4 text-lg">
+        <section className="section message mx-auto mt-16 px-4 py-8 text-center">
+          <h2 className="text-3xl font-headline text-primary mb-6">
+            💌 Pra você, minha deliciosa
+          </h2>
+          <p className={`${commonTextStyle} text-center`}>
             Desde o primeiro olhar, eu soube que você era diferente.<br />
             Você é linda, meiga, bravinha do jeito mais encantador do mundo.<br />
             Gosta de pagode, Shopee, Mentos... e de mim também, né?<br />
@@ -84,12 +87,22 @@ export default function Home() {
           </p>
         </section>
 
-        <button className="love-button bg-pink-500 text-white font-bold py-2 px-4 rounded mt-8" onClick={() => setShowLoveText(true)}>Te amo, minha maravilhosa 💖</button>
+        <div className="w-full text-center my-8 px-4">
+          <button
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-8 rounded-lg shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 text-xl inline-block"
+            onClick={() => setShowLoveText(true)}
+          >
+            Te amo, minha maravilhosa 💖
+          </button>
+        </div>
+
         {showLoveText && (
-          <p className="mt-4 text-center text-pink-600 text-xl font-bold">Te amo</p>
+          <div className="flex justify-center mb-12">
+            <HeartAnimation />
+          </div>
         )}
 
-        <footer className="mt-12 text-center text-gray-600">
+        <footer className="text-center text-foreground/70 py-10">
           Feito com carinho por alguém que não consegue parar de sorrir desde 05/04/2025 🫶
         </footer>
       </main>
