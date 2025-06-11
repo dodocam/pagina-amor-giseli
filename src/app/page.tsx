@@ -24,7 +24,7 @@ export default function Home() {
       <main className="snap-container">
         <StorySlide style={{ animationDelay: '0.2s' }}>
           <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl text-slate-500 mb-6">Você é o melhor capítulo da minha vida</h1>
-          <Heart className="w-12 h-12 md:w-16 md:h-16 text-primary fill-primary my-4" />
+          <Heart className="w-12 h-12 md:w-16 md:h-16 text-primary fill-primary my-4 mx-auto" />
           <p className={commonTextStyle}>Obrigado por ser meu lar, meu sorriso mais sincero e o amor que eu sempre sonhei. Te amo, minha maravilhosa.</p>
         </StorySlide>
 
