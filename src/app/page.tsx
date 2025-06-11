@@ -5,7 +5,7 @@ import LoveNoteGenerator from '@/components/LoveNoteGenerator';
 import { Heart, Clock, Camera, Moon, MessageSquareText } from 'lucide-react';
 
 const photos = [
-  { id: '1', src: 'https://placehold.co/300x300.png', alt: 'Foto 1', caption: 'Nosso primeiro sorriso juntos 😍', aiHint: 'couple smiling' },
+  { id: '1', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/071f225b-8b2b-4ac3-8726-67e4d8ae0168.png', alt: 'Casal sorrindo para selfie no shopping', caption: 'Aquele dia no shopping! 🛍️🤳', aiHint: 'couple shopping' },
   { id: '2', src: 'https://placehold.co/300x300.png', alt: 'Foto 2', caption: 'O show do Péricles, lembra?', aiHint: 'concert crowd' },
   { id: '3', src: 'https://placehold.co/300x300.png', alt: 'Foto 3', caption: 'Nosso boliche secreto 🎳', aiHint: 'bowling alley' },
   { id: '4', src: 'https://placehold.co/300x300.png', alt: 'Foto 4', caption: 'Abraço de lar', aiHint: 'couple hugging' },
