@@ -6,11 +6,12 @@ import LoveNoteGenerator from '@/components/LoveNoteGenerator';
 import { Heart, Clock, Camera, Moon, MessageSquareText } from 'lucide-react';
 
 const photos = [
-  { id: '1', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem1.jpeg?alt=media&token=e553a0a7-2633-4998-a71e-8529793b5e01', alt: 'Casal sorrindo para selfie no shopping', caption: 'Aquele dia no shopping! 🛍️🤳', aiHint: 'couple shopping' },
-  { id: '2', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem2.jpeg?alt=media&token=15c89e4f-79f2-4bfa-8f74-11a0c015d98c', alt: 'Casal sorrindo em ambiente interno com vista para a cidade', caption: 'O show do Péricles, lembra?', aiHint: 'couple concert' },
-  { id: '3', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem3.jpeg?alt=media&token=1be7f664-553e-4a1f-92f6-36f36c92578a', alt: 'Casal tirando selfie em ambiente moderno e iluminado', caption: 'Sempre juntos, em todos os momentos ✨', aiHint: 'couple selfie' },
-  { id: '4', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem4.jpeg?alt=media&token=6f40d98d-c7c2-4122-87c8-c4a600154f6a', alt: 'Casal abraçado sorrindo', caption: 'Abraço de lar', aiHint: 'couple hugging' },
-  { id: '5', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem5.jpeg?alt=media&token=209c8145-0268-40a0-b60b-92f2850a567e', alt: 'Casal sorrindo em um parque', caption: 'Passeio no parque 🌳☀️', aiHint: 'couple park' },
+  { id: '1', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem1.jpeg?alt=media&token=e553a0a7-2633-4998-a71e-8529793b5e01', alt: 'Casal sorrindo em parque dia ensolarado', caption: 'Passeio no parque, esse foi o 1 de muitos! ​🌳🥰​​', aiHint: 'couple park' },
+  { id: '2', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem2.jpeg?alt=media&token=15c89e4f-79f2-4bfa-8f74-11a0c015d98c', alt: 'Casal sorrindo após almoço no Cocobambu', caption: 'Almoço delicioso junto do meu amor!​😋​❤️​', aiHint: 'couple restaurant' },
+  { id: '3', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem3.jpeg?alt=media&token=1be7f664-553e-4a1f-92f6-36f36c92578a', alt: 'Casal tirando selfie saida do Cocobambu', caption: 'Passeio no shopping, olhares e sorrisos 🤣​😁​🤩​', aiHint: 'couple selfie' },
+  { id: '4', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem4.jpeg?alt=media&token=6f40d98d-c7c2-4122-87c8-c4a600154f6a', alt: 'Casal abraçado sorrindo', caption: 'Cinema Vip, até dormimos 🥱​😫​', aiHint: 'couple cinema' },
+  { id: '5', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem5.jpeg?alt=media&token=209c8145-0268-40a0-b60b-92f2850a567e', alt: 'Casal abraçado sorrindo', caption: 'Nosso passeio preferido ​😍​🥰​❤️​', aiHint: 'couple nature' },
+  { id: '6', src: '/imagem6.jpg', alt: 'Nova imagem adicionada ao carrossel', caption: 'Mais um momento inesquecível! 📸💖', aiHint: 'celebration event' },
 ];
 
 export default function Home() {
