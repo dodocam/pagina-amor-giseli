@@ -87,7 +87,7 @@ export default function Home() {
           <h2 className="text-3xl font-headline text-primary mb-6">
             💌 Pra você, minha deliciosa
           </h2>
-          <p className={`${commonTextStyle} text-center`}>
+          <p className={`${commonTextStyle} text-center leading-loose mx-auto`}>
             Desde o primeiro olhar, eu soube que você era diferente.<br />
             Você é linda, meiga, bravinha do jeito mais encantador do mundo.<br />
             Gosta de pagode, Shopee, Mentos... e de mim também, né?<br />

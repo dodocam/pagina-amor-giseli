@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useRef, useImperativeHandle, forwardRef } from 'react';
+import { useRef, useEffect, forwardRef } from 'react';
 
 interface BackgroundMusicPlayerProps {
   src: string;
@@ -14,21 +14,14 @@ export interface BackgroundMusicPlayerHandle {
 
 const BackgroundMusicPlayer = forwardRef<BackgroundMusicPlayerHandle, BackgroundMusicPlayerProps>(({ src }, ref) => {
   const audioRef = useRef<HTMLAudioElement>(null);
-
-  useImperativeHandle(ref, () => ({
-    playAudio: () => {
-      if (audioRef.current) {
-        audioRef.current.play().catch(error => {
-          console.warn("Música de fundo: Play foi impedido. Verifique as permissões do navegador ou interações do usuário.", error);
-        });
-      }
-    },
-    pauseAudio: () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-      }
+  
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play().catch(error => {
+        console.warn("Música de fundo: Play foi impedido. Verifique as permissões do navegador ou interações do usuário.", error);
+      });
     }
-  }));
+  }, []); // Empty dependency array means this effect runs only once after initial render
 
   return (
     <audio ref={audioRef} loop controls={false} style={{ display: 'none' }}>
