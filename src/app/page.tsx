@@ -6,11 +6,11 @@ import LoveNoteGenerator from '@/components/LoveNoteGenerator';
 import { Heart, Clock, Camera, Moon, MessageSquareText } from 'lucide-react';
 
 const photos = [
-  { id: '1', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/071f225b-8b2b-4ac3-8726-67e4d8ae0168.png', alt: 'Casal sorrindo para selfie no shopping', caption: 'Aquele dia no shopping! 🛍️🤳', aiHint: 'couple shopping' },
-  { id: '2', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/e2b01264-657c-4f6d-aece-b723120a5a77.png', alt: 'Casal sorrindo em ambiente interno com vista para a cidade', caption: 'O show do Péricles, lembra?', aiHint: 'couple concert' },
-  { id: '3', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/9c54b0e1-f300-4b91-9328-9f84367656d6.png', alt: 'Casal tirando selfie em ambiente moderno e iluminado', caption: 'Sempre juntos, em todos os momentos ✨', aiHint: 'couple selfie' },
-  { id: '4', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/f375a60b-3e1d-4d5e-9f17-54a58477d719.png', alt: 'Casal abraçado sorrindo', caption: 'Abraço de lar', aiHint: 'couple hugging' },
-  { id: '5', src: 'https://storage.googleapis.com/projectx-dev-images/SYDNEY_EXPERIMENTS_2/60d2f0e8-a5b5-4f7e-8e5e-035921e70a36.jpeg', alt: 'Casal sorrindo em um parque', caption: 'Passeio no parque 🌳☀️', aiHint: 'couple park' },
+  { id: '1', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem1.jpeg?alt=media&token=e553a0a7-2633-4998-a71e-8529793b5e01', alt: 'Casal sorrindo para selfie no shopping', caption: 'Aquele dia no shopping! 🛍️🤳', aiHint: 'couple shopping' },
+  { id: '2', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem2.jpeg?alt=media&token=15c89e4f-79f2-4bfa-8f74-11a0c015d98c', alt: 'Casal sorrindo em ambiente interno com vista para a cidade', caption: 'O show do Péricles, lembra?', aiHint: 'couple concert' },
+  { id: '3', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem3.jpeg?alt=media&token=1be7f664-553e-4a1f-92f6-36f36c92578a', alt: 'Casal tirando selfie em ambiente moderno e iluminado', caption: 'Sempre juntos, em todos os momentos ✨', aiHint: 'couple selfie' },
+  { id: '4', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem4.jpeg?alt=media&token=6f40d98d-c7c2-4122-87c8-c4a600154f6a', alt: 'Casal abraçado sorrindo', caption: 'Abraço de lar', aiHint: 'couple hugging' },
+  { id: '5', src: 'https://firebasestorage.googleapis.com/v0/b/amorenostro-18dd3.appspot.com/o/imagem5.jpeg?alt=media&token=209c8145-0268-40a0-b60b-92f2850a567e', alt: 'Casal sorrindo em um parque', caption: 'Passeio no parque 🌳☀️', aiHint: 'couple park' },
 ];
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <>
-      <BackgroundMusicPlayer src="/copia-proibida.mp3" />
+      <BackgroundMusicPlayer src="/copia-proibida-leo-foguete.mp3" />
       <main className="snap-container">
         <StorySlide style={{ animationDelay: '0.2s' }}>
           <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl text-slate-500 mb-6">Você é o melhor capítulo da minha vida</h1>
